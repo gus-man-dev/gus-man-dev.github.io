@@ -7,9 +7,8 @@ import { useInView } from '../../hooks/useInView';
 import { ButtonLink, DownloadIcon, MailIcon, PhoneIcon, PinIcon, Reveal, SocialIconLink } from '../controls';
 
 /**
- * Background photo stays, but the overlay/text/border colors now follow the
- * site theme (white wash in light mode, dark wash in dark mode) — matches
- * the reference's own light (home-two-w) vs dark (home-two) variants,
+ * Background photo stays, but the overlay/text/border colors follow the
+ * site theme — a white wash in light mode, a dark wash in dark mode —
  * rather than being permanently dark regardless of theme.
  */
 export function Hero() {

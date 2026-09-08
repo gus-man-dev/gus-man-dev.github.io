@@ -11,9 +11,8 @@ const CARD_CLASSES = 'rounded-lg bg-slate-50 p-6 ring-1 ring-slate-200 dark:bg-s
 
 /**
  * Education (left) and Languages (right) as two matching cards in one
- * section — the real CV has a single education entry and two languages
- * (no fabricated multi-entry padding, unlike the reference template's
- * repeated demo cards).
+ * section — the real CV has a single education entry and two languages,
+ * so no multi-entry padding is fabricated.
  */
 export function Education() {
   const { t } = useTranslation();

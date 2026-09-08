@@ -74,11 +74,10 @@ function SkillBar({ name, percent, animate }: Bar & { animate: boolean }) {
 }
 
 /**
- * "Technical Skills" (bars) + "Professional Skills" (rings) — the reference
- * template ships these with arbitrary/broken demo numbers (duplicate
- * entries, no real basis). These percentages are the author's own rough
- * self-estimate, grounded in years/depth of use from the real CV, not
- * copied from the template and not exact science — flagged as such.
+ * "Technical Skills" (bars) + "Professional Skills" (rings). The
+ * percentages are the author's own rough self-estimate, grounded in
+ * years/depth of use from the real CV — not exact science, and flagged
+ * as such in the on-page disclaimer.
  */
 export function Proficiency() {
   const { t } = useTranslation();

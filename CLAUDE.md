@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A personal CV/resume single-page site (Roman Gusevski), built as a close visual port of an external Bootstrap template ("Maha") into React. Content, layout, and styling choices throughout the codebase are deliberately matched to that reference rather than invented — see the "Design fidelity" note below before changing colors, fonts, or section layout.
+A personal CV/resume single-page site (Roman Gusevski) built with React. The visual language — colors, fonts, section layout — is an established design decision; see the "Design fidelity" note below before changing any of it.
 
 ## Commands
 
@@ -31,7 +31,7 @@ There is no test suite / test runner configured in this repo.
 
 **Theme** (`src/theme/ThemeContext.tsx`): a plain context/provider toggles a `.dark` class on `<html>` and persists the choice to `localStorage` (initial value falls back to `prefers-color-scheme`). Tailwind v4's dark variant is repointed from `prefers-color-scheme` to that class via `@custom-variant dark (&:where(.dark, .dark *));` in `src/index.css` — this is what makes the manual toggle override the OS setting.
 
-**Design fidelity**: `src/index.css` defines custom Tailwind theme tokens via `@theme` — `--color-accent` (`#0bceaf`), `--color-dark-bg` (`#100e17`), `--font-sans` (Roboto, loaded via Google Fonts `<link>` in `index.html`) — pulled directly from the reference template's computed styles, not chosen freely. `Hero.tsx` and `Experience.tsx` intentionally render on a fixed dark photo background (`assets/images/hero-bg.jpg`) regardless of the site's light/dark theme setting, matching the reference's treatment of those two sections specifically; other sections do follow the theme via `dark:` classes.
+**Design fidelity**: `src/index.css` defines custom Tailwind theme tokens via `@theme` — `--color-accent` (`#0bceaf`), `--color-dark-bg` (`#100e17`), `--font-sans` (Roboto, loaded via Google Fonts `<link>` in `index.html`). These are the site's fixed brand values — don't swap them casually. `Hero.tsx`, `Experience.tsx` and `CtaBanner.tsx` render on photo backgrounds with theme-following overlays; other sections follow the light/dark theme via `dark:` classes.
 
 **Header behavior**: sticky, transparent over the Hero photo, switching to a solid `bg-dark-bg` bar once scrolled (via the `useScrolled` hook in `src/hooks/useScrolled.ts`) — not two different components, one `Header.tsx` with conditional classes.
 

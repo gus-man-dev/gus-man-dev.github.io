@@ -11,9 +11,8 @@ interface PricingTier {
 }
 
 /**
- * Three-tier pricing table matching the Maha reference's structure
- * (full-time / fixed-price / hourly), populated with the real engagement
- * options and rates rather than template lorem-ipsum figures.
+ * Three-tier pricing table (full-time / fixed-price / hourly) with the
+ * real engagement options and rates.
  */
 export function Pricing() {
   const { t } = useTranslation();

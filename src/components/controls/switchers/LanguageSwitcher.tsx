@@ -44,6 +44,7 @@ export function LanguageSwitcher() {
       <div className="absolute right-0 z-10 mt-2 w-36 overflow-hidden rounded-md border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-dark-bg">
         {SUPPORTED_LANGUAGES.map((lang) => {
           const { Flag, label } = LANGUAGE_META[lang];
+
           return (
             <button
               key={lang}

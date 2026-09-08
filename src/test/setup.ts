@@ -41,7 +41,12 @@ export class MockIntersectionObserver {
   }
 
   intersect(isIntersecting: boolean): void {
-    this.callback([{ isIntersecting } as IntersectionObserverEntry], this as unknown as IntersectionObserver);
+    this.fire([{ isIntersecting }]);
+  }
+
+  /** Fires the callback with arbitrary partial entries — for observers that compare targets or ratios. */
+  fire(entries: Partial<IntersectionObserverEntry>[]): void {
+    this.callback(entries as IntersectionObserverEntry[], this as unknown as IntersectionObserver);
   }
 }
 

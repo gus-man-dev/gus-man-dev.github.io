@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+/* Enables `dark:` utilities driven by a `.dark` class on <html> instead of
+   only `prefers-color-scheme`, so the header toggle can override the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Matched from the Maha reference template (home-two-w.html / home-two.html):
+   accent teal on the primary CTA/badge, near-black dark theme background,
+   Roboto as both the body and heading typeface. */
+@theme {
+  --color-accent: #0bceaf;
+  --color-dark-bg: #100e17;
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}

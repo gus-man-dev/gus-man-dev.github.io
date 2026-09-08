@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "Roman Gusevski — CV"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Roman Gusevski",
+    "title": "Senior Front-End Developer",
+    "location": "Polotsk, Belarus · Open to remote / relocation",
+    "downloadCv": "Download CV"
+  },
+  "about": {
+    "heading": "About Me",
+    "summary": "Senior Front-End Developer with 9+ years building production web applications for international clients across the US, UK, Sweden, and Brazil. Deep expertise in the React (Next.js, Redux, GraphQL) and Angular (NgRx/NGXS, RxJS) ecosystems, with hands-on experience architecting features from scratch, leading front-end teams, and shipping AI-driven functionality. Comfortable owning a codebase end-to-end — from architecture decisions and code-quality standards to mentoring and cross-team review."
+  },
+  "experience": {
+    "heading": "Experience",
+    "present": "Present",
+    "items": [
+      {
+        "company": "Cvent",
+        "role": "Senior Front-End Developer",
+        "start": "03.2023",
+        "end": "present",
+        "meta": "via Trembit (outstaffing) · United States · event-management software",
+        "bullets": [
+          "Design and build new product features from scratch, including AI-assisted functionality",
+          "Own architectural decisions for Next.js and Node.js modules"
+        ],
+        "stack": ["React", "Next.js 13/14", "Node.js", "Redux", "Claude Code"]
+      },
+      {
+        "company": "Learnster",
+        "role": "Senior Front-End Developer",
+        "start": "01.2022",
+        "end": "03.2023",
+        "meta": "via Trembit (outstaffing) · Sweden · AI-driven learning-management platform (LMS)",
+        "bullets": [
+          "Delivered features across 3 concurrent workstreams on a large LMS platform",
+          "Built a shared component library adopted platform-wide"
+        ],
+        "stack": ["Angular", "RxJS", "SCSS", "NGX-Bootstrap", "Python"]
+      },
+      {
+        "company": "Dashworks",
+        "role": "Senior Front-End Developer & Team Lead",
+        "start": "05.2020",
+        "end": "01.2022",
+        "meta": "via Yotec · United Kingdom · enterprise IT-management platform · concurrent with Rockspoon",
+        "bullets": [
+          "Led a front-end sub-team within a 14-person org",
+          "Took unit test coverage from 0% to 99%, from scratch"
+        ],
+        "stack": ["Angular", "NGRX", "RxJS", "Jest", "Angular Material"]
+      },
+      {
+        "company": "Rockspoon",
+        "role": "Senior Front-End Developer",
+        "start": "05.2020",
+        "end": "01.2022",
+        "meta": "via ITechArt (outstaffing) · Brazil · POS & restaurant-management software · concurrent with Dashworks",
+        "bullets": [
+          "Built core POS functionality end-to-end",
+          "Owned business-logic features from architecture to stabilization"
+        ],
+        "stack": ["Angular", "NGXS", "RxJS", "Angular Material", "Go"]
+      },
+      {
+        "company": "iStarMap",
+        "role": "Front-End Lead",
+        "start": "05.2019",
+        "end": "05.2020",
+        "meta": "via ITechArt (outstaffing) · Belarus · internal HR platform for skills & project tracking",
+        "bullets": ["Front-end lead on a 4-developer team", "Architected the client app with React and Apollo GraphQL"],
+        "stack": ["React", "Apollo Client", "GraphQL", "Redux", "Material UI"]
+      },
+      {
+        "company": "Andersen",
+        "role": "Front-End Developer",
+        "start": "10.2016",
+        "end": "03.2019",
+        "meta": "Belarus / Russia · direct employer · 5 client engagements",
+        "bullets": [
+          "Delivered 5 client engagements across manufacturing, veterinary, and B2B trading platforms (Indusoft, Cislink)",
+          "Built internal travel-request tooling for UNESCO (France), with e2e test coverage"
+        ],
+        "stack": ["JavaScript", "TypeScript", "Angular/AngularJS", "RxJS", "AG-Grid"]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Key Technologies",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": ["JavaScript", "TypeScript"]
+      },
+      {
+        "name": "Frameworks",
+        "items": ["React", "Next.js", "Angular"]
+      },
+      {
+        "name": "State Management",
+        "items": ["Redux", "Redux-Saga", "NgRx", "NGXS", "Apollo Client", "RxJS"]
+      },
+      {
+        "name": "Styling",
+        "items": ["SCSS/SASS", "LESS", "Styled Components", "Emotion", "CSS-in-JS", "Material UI", "Bootstrap"]
+      },
+      {
+        "name": "API / Data",
+        "items": ["REST API", "GraphQL", "Node.js"]
+      },
+      {
+        "name": "Testing & Tooling",
+        "items": ["Jest", "Storybook", "Istanbul/nyc", "ESLint", "Prettier", "Webpack", "Protractor"]
+      },
+      {
+        "name": "AI Tools",
+        "items": ["Claude Code", "GitHub Copilot", "ChatGPT"]
+      },
+      {
+        "name": "Other",
+        "items": ["Docker", "Git", "Agile/Scrum"]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "school": "Polotsk State University",
+    "degree": "Degree in Information Technologies",
+    "years": "2013 – 2018",
+    "description": "Coursework covering programming fundamentals, software engineering, and computer science — the foundation for a 9+ year front-end career since."
+  },
+  "languages": {
+    "heading": "Languages",
+    "items": [
+      {
+        "name": "English",
+        "level": "B2+"
+      },
+      {
+        "name": "Russian",
+        "level": "Native (C2)"
+      }
+    ]
+  },
+  "proficiency": {
+    "technicalHeading": "Technical Skills",
+    "professionalHeading": "Professional Skills",
+    "technical": [
+      {
+        "name": "JavaScript",
+        "percent": 95
+      },
+      {
+        "name": "TypeScript",
+        "percent": 90
+      },
+      {
+        "name": "React",
+        "percent": 92
+      },
+      {
+        "name": "Angular",
+        "percent": 88
+      },
+      {
+        "name": "Next.js",
+        "percent": 82
+      },
+      {
+        "name": "Node.js",
+        "percent": 70
+      }
+    ],
+    "professional": [
+      {
+        "name": "Communication",
+        "percent": 90
+      },
+      {
+        "name": "Team Work",
+        "percent": 92
+      },
+      {
+        "name": "Leadership",
+        "percent": 88
+      },
+      {
+        "name": "Problem Solving",
+        "percent": 90
+      }
+    ],
+    "disclaimer": "Self-estimated based on years and depth of real-world use across the roles above — not a precise science."
+  },
+  "services": {
+    "heading": "What I Do",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Building production React/Next.js and Angular applications from scratch, from initial architecture to shipped features — currently working on a Next.js 13/14 and Node.js codebase at Cvent."
+      },
+      {
+        "title": "Code Quality & Architecture",
+        "description": "Setting the code-quality bar for the team: introduced ESLint and Prettier as the project's code-style champion across a 14-engineer codebase, ran cross-review, and took unit test coverage from 0% to 99% from scratch."
+      },
+      {
+        "title": "Team Leadership & Mentoring",
+        "description": "Led a front-end sub-team within a 14-person org and a 4-person front-end team, working closely with 8 QA/AQA engineers, running Scrum ceremonies, and mentoring engineers."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Have a project in mind?",
+    "body": "I'm always glad to talk through a new idea, a tricky front-end problem, or just swap notes on React and TypeScript. Drop me a line and let's see where it goes.",
+    "cta": "Get in Touch"
+  },
+  "pricing": {
+    "heading": "Availability & Rates",
+    "cta": "Get in Touch",
+    "tiers": [
+      {
+        "name": "Full-time",
+        "price": "$5000",
+        "note": "Available for full-time roles",
+        "features": [
+          "React / Next.js / Angular development",
+          "Code review & architecture",
+          "Team leadership & mentoring",
+          "AI-assisted development workflow"
+        ]
+      },
+      {
+        "name": "Fixed Price Project",
+        "price": "Variable",
+        "note": "Available for fixed-scope project work",
+        "features": [
+          "React / Next.js / Angular development",
+          "Code review & architecture",
+          "AI-assisted development workflow"
+        ]
+      },
+      {
+        "name": "Hourly",
+        "price": "$30–50/hr",
+        "note": "Available for hourly engagements, rate negotiable",
+        "features": [
+          "React / Next.js / Angular development",
+          "Code review & architecture",
+          "Team leadership & mentoring",
+          "AI-assisted development workflow"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "address": {
+      "label": "Address",
+      "value": "Belarus, Polotsk, Turgeneva 8-12"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Phone"
+    },
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "emailPlaceholder": "Your Email",
+      "message": "Message",
+      "messagePlaceholder": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "rights": "All right reserved"
+  },
+  "theme": {
+    "toggleToLight": "Switch to light theme",
+    "toggleToDark": "Switch to dark theme"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

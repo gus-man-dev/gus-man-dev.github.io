@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "Роман Гусевский — CV"
+  },
+  "nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "experience": "Опыт",
+    "pricing": "Условия",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "greeting": "Привет, я",
+    "name": "Роман Гусевский",
+    "title": "Senior Front-End Developer",
+    "location": "Полоцк, Беларусь · Готов к удалёнке / релокации",
+    "downloadCv": "Скачать CV"
+  },
+  "about": {
+    "heading": "Обо мне",
+    "summary": "Senior Front-End Developer с опытом 9+ лет в разработке продакшн веб-приложений для международных клиентов из США, Великобритании, Швеции и Бразилии. Глубокая экспертиза в экосистемах React (Next.js, Redux, GraphQL) и Angular (NgRx/NGXS, RxJS), с практическим опытом проектирования фич с нуля, руководства front-end командами и внедрения AI-функциональности. Уверенно веду кодовую базу от архитектурных решений и стандартов качества кода до менторства и кросс-командного ревью."
+  },
+  "experience": {
+    "heading": "Опыт работы",
+    "present": "по настоящее время",
+    "items": [
+      {
+        "company": "Cvent",
+        "role": "Senior Front-End Developer",
+        "start": "03.2023",
+        "end": "present",
+        "meta": "через Trembit (аутстаффинг) · США · ПО для управления мероприятиями",
+        "bullets": [
+          "Проектирую и разрабатываю новые продуктовые фичи с нуля, включая AI-функциональность",
+          "Отвечаю за архитектурные решения модулей на Next.js и Node.js"
+        ],
+        "stack": ["React", "Next.js 13/14", "Node.js", "Redux", "Claude Code"]
+      },
+      {
+        "company": "Learnster",
+        "role": "Senior Front-End Developer",
+        "start": "01.2022",
+        "end": "03.2023",
+        "meta": "через Trembit (аутстаффинг) · Швеция · AI-платформа управления обучением (LMS)",
+        "bullets": [
+          "Поставлял фичи в 3 параллельных потоках работ на крупной LMS-платформе",
+          "Создал общую библиотеку компонентов, принятую всей командой"
+        ],
+        "stack": ["Angular", "RxJS", "SCSS", "NGX-Bootstrap", "Python"]
+      },
+      {
+        "company": "Dashworks",
+        "role": "Senior Front-End Developer & Team Lead",
+        "start": "05.2020",
+        "end": "01.2022",
+        "meta": "через Yotec · Великобритания · корпоративная платформа IT-менеджмента · параллельно с Rockspoon",
+        "bullets": ["Руководил front-end подкомандой из 14 человек", "Поднял покрытие unit-тестами с 0% до 99% с нуля"],
+        "stack": ["Angular", "NGRX", "RxJS", "Jest", "Angular Material"]
+      },
+      {
+        "company": "Rockspoon",
+        "role": "Senior Front-End Developer",
+        "start": "05.2020",
+        "end": "01.2022",
+        "meta": "через ITechArt (аутстаффинг) · Бразилия · ПО для POS и управления рестораном · параллельно с Dashworks",
+        "bullets": [
+          "Реализовал ключевую POS-функциональность end-to-end",
+          "Отвечал за сложные фичи бизнес-логики — от архитектуры до стабилизации"
+        ],
+        "stack": ["Angular", "NGXS", "RxJS", "Angular Material", "Go"]
+      },
+      {
+        "company": "iStarMap",
+        "role": "Front-End Lead",
+        "start": "05.2019",
+        "end": "05.2020",
+        "meta": "через ITechArt (аутстаффинг) · Беларусь · внутренняя HR-платформа учёта навыков и проектов",
+        "bullets": [
+          "Front-end лид команды из 4 разработчиков",
+          "Спроектировал клиентское приложение на React и Apollo GraphQL"
+        ],
+        "stack": ["React", "Apollo Client", "GraphQL", "Redux", "Material UI"]
+      },
+      {
+        "company": "Andersen",
+        "role": "Front-End Developer",
+        "start": "10.2016",
+        "end": "03.2019",
+        "meta": "Беларусь / Россия · прямой работодатель · 5 клиентских проектов",
+        "bullets": [
+          "5 клиентских проектов в сферах производства, ветеринарии и B2B-торговли (Indusoft, Cislink)",
+          "Построил внутренний инструмент заявок на командировки для UNESCO (Франция), написал e2e-тесты"
+        ],
+        "stack": ["JavaScript", "TypeScript", "Angular/AngularJS", "RxJS", "AG-Grid"]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Ключевые технологии",
+    "categories": [
+      {
+        "name": "Языки",
+        "items": ["JavaScript", "TypeScript"]
+      },
+      {
+        "name": "Фреймворки",
+        "items": ["React", "Next.js", "Angular"]
+      },
+      {
+        "name": "State Management",
+        "items": ["Redux", "Redux-Saga", "NgRx", "NGXS", "Apollo Client", "RxJS"]
+      },
+      {
+        "name": "Стилизация",
+        "items": ["SCSS/SASS", "LESS", "Styled Components", "Emotion", "CSS-in-JS", "Material UI", "Bootstrap"]
+      },
+      {
+        "name": "API / Данные",
+        "items": ["REST API", "GraphQL", "Node.js"]
+      },
+      {
+        "name": "Тестирование и инструменты",
+        "items": ["Jest", "Storybook", "Istanbul/nyc", "ESLint", "Prettier", "Webpack", "Protractor"]
+      },
+      {
+        "name": "AI-инструменты",
+        "items": ["Claude Code", "GitHub Copilot", "ChatGPT"]
+      },
+      {
+        "name": "Другое",
+        "items": ["Docker", "Git", "Agile/Scrum"]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Образование",
+    "school": "Полоцкий государственный университет",
+    "degree": "Специальность «Информационные технологии»",
+    "years": "2013 – 2018",
+    "description": "Программа включала основы программирования, разработку ПО и computer science — базу для последующей 9+ летней карьеры во front-end."
+  },
+  "languages": {
+    "heading": "Языки",
+    "items": [
+      {
+        "name": "Английский",
+        "level": "B2+"
+      },
+      {
+        "name": "Русский",
+        "level": "Родной (C2)"
+      }
+    ]
+  },
+  "proficiency": {
+    "technicalHeading": "Технические навыки",
+    "professionalHeading": "Профессиональные навыки",
+    "technical": [
+      {
+        "name": "JavaScript",
+        "percent": 95
+      },
+      {
+        "name": "TypeScript",
+        "percent": 90
+      },
+      {
+        "name": "React",
+        "percent": 92
+      },
+      {
+        "name": "Angular",
+        "percent": 88
+      },
+      {
+        "name": "Next.js",
+        "percent": 82
+      },
+      {
+        "name": "Node.js",
+        "percent": 70
+      }
+    ],
+    "professional": [
+      {
+        "name": "Коммуникация",
+        "percent": 90
+      },
+      {
+        "name": "Командная работа",
+        "percent": 92
+      },
+      {
+        "name": "Лидерство",
+        "percent": 88
+      },
+      {
+        "name": "Решение проблем",
+        "percent": 90
+      }
+    ],
+    "disclaimer": "Самооценка на основе лет и глубины реального использования на перечисленных выше позициях — не точная наука."
+  },
+  "services": {
+    "heading": "Чем я занимаюсь",
+    "items": [
+      {
+        "title": "Frontend-разработка",
+        "description": "Разрабатываю production-приложения на React/Next.js и Angular с нуля — от архитектуры до готовых фич. Сейчас работаю с кодовой базой на Next.js 13/14 и Node.js в Cvent."
+      },
+      {
+        "title": "Качество кода и архитектура",
+        "description": "Отвечаю за стандарты качества кода в команде: внедрил ESLint и Prettier как code-style champion в команде из 14 инженеров, веду кросс-ревью и с нуля довёл покрытие юнит-тестами с 0% до 99%."
+      },
+      {
+        "title": "Лидерство и менторство",
+        "description": "Руководил front-end подкомандой в организации из 14 человек и отдельной front-end командой из 4 человек, тесно работал с 8 QA/AQA-инженерами, проводил Scrum-церемонии и занимался менторством разработчиков."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "Есть идея для проекта?",
+    "body": "Всегда рад обсудить новую идею, сложную задачу на фронтенде или просто поговорить про React и TypeScript. Напишите мне — обсудим детали.",
+    "cta": "Связаться"
+  },
+  "pricing": {
+    "heading": "Доступность и ставки",
+    "cta": "Связаться со мной",
+    "tiers": [
+      {
+        "name": "Полная занятость",
+        "price": "$5000",
+        "note": "Готов рассматривать предложения о полной занятости",
+        "features": [
+          "Разработка на React / Next.js / Angular",
+          "Код-ревью и архитектура",
+          "Руководство командой и менторинг",
+          "Разработка с использованием AI-инструментов"
+        ]
+      },
+      {
+        "name": "Проект с фиксированной стоимостью",
+        "price": "Договорная",
+        "note": "Готов брать проекты с фиксированным объёмом работ",
+        "features": [
+          "Разработка на React / Next.js / Angular",
+          "Код-ревью и архитектура",
+          "Разработка с использованием AI-инструментов"
+        ]
+      },
+      {
+        "name": "Почасовая оплата",
+        "price": "$30–50/час",
+        "note": "Готов к почасовым проектам, ставка обсуждается",
+        "features": [
+          "Разработка на React / Next.js / Angular",
+          "Код-ревью и архитектура",
+          "Руководство командой и менторинг",
+          "Разработка с использованием AI-инструментов"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Связаться со мной",
+    "address": {
+      "label": "Адрес",
+      "value": "Беларусь, Полоцк, ул. Тургенева 8-12"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Телефон"
+    },
+    "form": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "email": "Email",
+      "emailPlaceholder": "Ваш email",
+      "message": "Сообщение",
+      "messagePlaceholder": "Ваше сообщение",
+      "submit": "Отправить сообщение"
+    }
+  },
+  "footer": {
+    "rights": "Все права защищены"
+  },
+  "theme": {
+    "toggleToLight": "Переключить на светлую тему",
+    "toggleToDark": "Переключить на тёмную тему"
+  },
+  "language": {
+    "label": "Язык"
+  }
+}

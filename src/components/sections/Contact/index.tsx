@@ -7,10 +7,9 @@ import { ContactForm } from './ContactForm';
 import { ContactInfoCards } from './ContactInfoCards';
 
 /**
- * "Contact Me" block from the Maha reference: info cards on the left, the
- * message form on the right, the page footer merged into the bottom of
- * this full-height section. Composition only — each piece lives in its
- * own file next to this one.
+ * "Contact Me": info cards on the left, the message form on the right,
+ * the page footer merged into the bottom of this full-height section.
+ * Composition only — each piece lives in its own file next to this one.
  */
 export function Contact() {
   const { t } = useTranslation();

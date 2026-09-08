@@ -6,9 +6,8 @@ import { CodeIcon, Reveal, SectionContainer, SectionHeading, TargetIcon, UsersIc
 /**
  * Per-card icon + its own accent color, matched by array index to the
  * i18n `services.items` order (frontend / code quality / leadership) —
- * mirrors the reference template's "What I do" cards where each card
- * carries a differently-colored icon (purple / red / blue), not the
- * site-wide teal accent.
+ * each card carries a differently-colored icon (red / purple / blue)
+ * instead of the site-wide teal accent, so the trio reads as distinct.
  */
 const CARD_META: { Icon: ComponentType<SVGProps<SVGSVGElement>>; iconClasses: string }[] = [
   { Icon: CodeIcon, iconClasses: 'text-red-500 dark:text-red-400' },

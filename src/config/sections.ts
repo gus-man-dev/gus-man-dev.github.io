@@ -13,11 +13,10 @@ export const sectionFlags = {
   proficiency: false, // Technical/Professional Skills bars & rings — self-assessed % read as arbitrary; Key Technologies covers the same ground
   education: true,
   experience: true,
-  ctaBanner: true, // "Interested to Work?" in the reference, renamed
+  ctaBanner: true, // "Have a project in mind?" banner
   pricing: true,
   contact: true,
 } as const;
 
-// The reference template's Testimonials / Blog / Portfolio / Featured Projects
-// sections were excluded from this port entirely (per requirements) — they have
-// no components, so they get no flags here.
+// Testimonials / Blog / Portfolio / Featured Projects sections were cut from
+// the design entirely — they have no components, so they get no flags here.

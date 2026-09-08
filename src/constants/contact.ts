@@ -29,10 +29,10 @@ const SOCIAL_LINKS: SocialLink[] = [
   { href: `mailto:${EMAIL}`, label: 'Email', Icon: MailIcon },
   { href: `https://t.me/${TELEGRAM_HANDLE}`, label: 'Telegram', Icon: TelegramIcon },
   { href: LINKEDIN_URL, label: 'LinkedIn', Icon: LinkedInIcon },
-  { href: '#', label: 'GitHub', Icon: GitHubIcon, pending: true },
+  { href: 'https://github.com/gus-man-dev', label: 'GitHub', Icon: GitHubIcon },
+  { href: 'https://www.instagram.com/gus__man', label: 'Instagram', Icon: InstagramIcon },
+  { href: 'https://www.facebook.com/roma.gusevsky', label: 'Facebook', Icon: FacebookIcon },
   { href: '#', label: 'Twitter / X', Icon: TwitterIcon, pending: true },
-  { href: '#', label: 'Instagram', Icon: InstagramIcon, pending: true },
-  { href: '#', label: 'Facebook', Icon: FacebookIcon, pending: true },
 ];
 
 /**

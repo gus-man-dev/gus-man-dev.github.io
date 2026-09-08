@@ -6,7 +6,9 @@ export function useScrolled(threshold = 40) {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > threshold);
+
     window.addEventListener('scroll', onScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', onScroll);
   }, [threshold]);
 

@@ -26,6 +26,7 @@ export function useInView<T extends HTMLElement>() {
     );
 
     observer.observe(element);
+
     return () => observer.disconnect();
   }, []);
 

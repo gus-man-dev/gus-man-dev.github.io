@@ -48,6 +48,7 @@ export function ContactForm() {
 
     if (!WEB3FORMS_ACCESS_KEY) {
       window.location.href = buildMailtoHref(form);
+
       return;
     }
 

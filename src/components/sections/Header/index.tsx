@@ -32,6 +32,7 @@ export function Header() {
         <nav className="hidden items-center gap-7 md:flex">
           {VISIBLE_NAV_ITEMS.map((item) => {
             const isActive = activeId === item.href.slice(1);
+
             return (
               <a
                 key={item.key}

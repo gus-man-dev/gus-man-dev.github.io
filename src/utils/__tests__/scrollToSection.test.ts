@@ -15,12 +15,14 @@ describe('scrollToSection', () => {
 
   it('scrolls to the section top minus the fixed header offset', () => {
     const target = document.createElement('div');
+
     target.id = 'about';
     document.body.appendChild(target);
     vi.spyOn(target, 'getBoundingClientRect').mockReturnValue({ top: 500 } as DOMRect);
     Object.defineProperty(window, 'scrollY', { configurable: true, value: 200 });
 
     const scrollTo = vi.fn();
+
     vi.stubGlobal('scrollTo', scrollTo);
     const event = mockClickEvent();
 
@@ -33,6 +35,7 @@ describe('scrollToSection', () => {
 
   it('prevents the default jump but does not scroll when the section is missing', () => {
     const scrollTo = vi.fn();
+
     vi.stubGlobal('scrollTo', scrollTo);
     const event = mockClickEvent();
 

@@ -30,6 +30,7 @@ export function Services() {
         <div ref={ref} className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => {
             const { Icon, iconClasses } = CARD_META[index % CARD_META.length];
+
             return (
               <Reveal key={item.title} inView={inView} index={index}>
                 <div className="h-full rounded-lg bg-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)] ring-1 ring-slate-100 transition-all hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.1)] dark:bg-white/5 dark:shadow-none dark:ring-white/10 dark:hover:bg-white/[0.08]">

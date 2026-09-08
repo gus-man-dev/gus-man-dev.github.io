@@ -24,6 +24,7 @@ export function useActiveSection(ids: string[]) {
     );
 
     elements.forEach((el) => observer.observe(el));
+
     return () => observer.disconnect();
   }, [ids]);
 

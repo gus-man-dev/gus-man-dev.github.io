@@ -1,7 +1,7 @@
 import { useState, type ComponentType, type FormEvent, type SVGProps } from 'react';
 import { useTranslation } from 'react-i18next';
 import contactMap from '../../assets/images/contact-map.png';
-import { EMAIL, PHONE_DISPLAY, PHONE_TEL, VISIBLE_SOCIAL_LINKS, WEB3FORMS_ACCESS_KEY } from '../../constants/contact';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS, WEB3FORMS_ACCESS_KEY } from '../../constants/contact';
 import { useInView } from '../../hooks/useInView';
 import { Button, MailIcon, PhoneIcon, PinIcon, Reveal, SectionHeading, SocialIconLink } from '../controls';
 
@@ -250,7 +250,7 @@ export function Contact() {
           </span>
 
           <div className="flex gap-3">
-            {VISIBLE_SOCIAL_LINKS.map((link) => (
+            {SOCIAL_LINKS.map((link) => (
               <SocialIconLink
                 key={link.label}
                 {...link}

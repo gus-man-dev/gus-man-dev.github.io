@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import heroBg from '../../assets/images/hero-bg-2.jpg';
 import profilePhoto from '../../assets/images/profile.jpg';
-import { EMAIL, PHONE_DISPLAY, PHONE_TEL, VISIBLE_SOCIAL_LINKS } from '../../constants/contact';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS } from '../../constants/contact';
 import { CV_PDF_PATH } from '../../constants/personal';
 import { useInView } from '../../hooks/useInView';
 import { ButtonLink, DownloadIcon, MailIcon, PhoneIcon, PinIcon, Reveal, SocialIconLink } from '../controls';
@@ -90,7 +90,7 @@ export function Hero() {
 
           <Reveal inView={inView} index={6}>
             <div className="mt-5 flex flex-wrap justify-center gap-4 md:justify-start">
-              {VISIBLE_SOCIAL_LINKS.map((link) => (
+              {SOCIAL_LINKS.map((link) => (
                 <SocialIconLink
                   key={link.label}
                   {...link}

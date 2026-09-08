@@ -40,6 +40,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     const query = window.matchMedia(DARK_SCHEME_QUERY);
     const followSystem = (event: MediaQueryListEvent) => setSystemTheme(event.matches ? 'dark' : 'light');
+
     query.addEventListener('change', followSystem);
     return () => query.removeEventListener('change', followSystem);
   }, [storedTheme]);

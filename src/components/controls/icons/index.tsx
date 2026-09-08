@@ -51,14 +51,6 @@ export function GitHubIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function TwitterIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M13.6 10.4 20.2 3h-1.6l-5.7 6.4L8.3 3H3l6.9 9.9L3 21h1.6l6.1-6.8 4.9 6.8H21l-7.4-10.6Zm-2.2 2.4-.7-1L5.1 4.2h2.4l4.5 6.4.7 1 5.9 8.3h-2.4l-4.8-6.9Z" />
-    </svg>
-  );
-}
-
 export function InstagramIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} {...props}>

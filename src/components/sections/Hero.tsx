@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import heroBg from '../../assets/images/hero-bg-2.jpg';
 import profilePhoto from '../../assets/images/profile.jpg';
-import { EMAIL, PHONE_DISPLAY, PHONE_TEL, VISIBLE_SOCIAL_LINKS } from '../../constants/contact';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS } from '../../constants/contact';
 import { CV_PDF_PATH } from '../../constants/personal';
 import { useInView } from '../../hooks/useInView';
 import { ButtonLink, DownloadIcon, MailIcon, PhoneIcon, PinIcon, Reveal, SocialIconLink } from '../controls';
@@ -49,15 +49,19 @@ export function Hero() {
           </Reveal>
 
           <Reveal inView={inView} index={1}>
-            <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-white">{t('hero.name')}</h1>
+            <h1 data-testid="hero-name" className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl dark:text-white">
+              {t('hero.name')}
+            </h1>
           </Reveal>
           <Reveal inView={inView} index={2}>
-            <p className="mt-2 text-xl text-slate-700 dark:text-slate-200">{t('hero.title')}</p>
+            <p data-testid="hero-title" className="mt-2 text-xl text-slate-700 dark:text-slate-200">
+              {t('hero.title')}
+            </p>
           </Reveal>
 
           <div className="mt-4 flex flex-col gap-1.5 text-sm text-slate-600 dark:text-slate-300">
             <Reveal inView={inView} index={3}>
-              <p className="flex items-center justify-center gap-2 md:justify-start">
+              <p data-testid="hero-location" className="flex items-center justify-center gap-2 md:justify-start">
                 <PinIcon className="h-4 w-4 shrink-0" />
                 {t('hero.location')}
               </p>
@@ -65,6 +69,7 @@ export function Hero() {
             <Reveal inView={inView} index={4}>
               <a
                 href={`mailto:${EMAIL}`}
+                data-testid="hero-email"
                 className="flex items-center justify-center gap-2 hover:text-slate-900 md:justify-start dark:hover:text-white"
               >
                 <MailIcon className="h-4 w-4 shrink-0" />
@@ -74,6 +79,7 @@ export function Hero() {
             <Reveal inView={inView} index={5}>
               <a
                 href={`tel:${PHONE_TEL}`}
+                data-testid="hero-phone"
                 className="flex items-center justify-center gap-2 hover:text-slate-900 md:justify-start dark:hover:text-white"
               >
                 <PhoneIcon className="h-4 w-4 shrink-0" />
@@ -84,7 +90,7 @@ export function Hero() {
 
           <Reveal inView={inView} index={6}>
             <div className="mt-5 flex flex-wrap justify-center gap-4 md:justify-start">
-              {VISIBLE_SOCIAL_LINKS.map((link) => (
+              {SOCIAL_LINKS.map((link) => (
                 <SocialIconLink
                   key={link.label}
                   {...link}
@@ -96,7 +102,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal inView={inView} index={7}>
-            <ButtonLink href={CV_PDF_PATH} download className="mt-8 gap-2">
+            <ButtonLink href={CV_PDF_PATH} download data-testid="hero-download-cv" className="mt-8 gap-2">
               {t('hero.downloadCv')}
               <DownloadIcon className="h-4 w-4" />
             </ButtonLink>

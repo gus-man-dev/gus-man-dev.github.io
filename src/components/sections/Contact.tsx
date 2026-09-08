@@ -123,8 +123,15 @@ export function Contact() {
                     <Icon className="h-7 w-7" />
                   </span>
                   <div>
-                    <p className="text-xl font-semibold text-slate-900 dark:text-white">{label}</p>
-                    <p className="text-slate-600 dark:text-slate-300">{value}</p>
+                    <p
+                      data-testid={`contact-info-${key}-label`}
+                      className="text-xl font-semibold text-slate-900 dark:text-white"
+                    >
+                      {label}
+                    </p>
+                    <p data-testid={`contact-info-${key}-value`} className="text-slate-600 dark:text-slate-300">
+                      {value}
+                    </p>
                   </div>
                 </>
               );
@@ -155,6 +162,7 @@ export function Contact() {
                   </label>
                   <input
                     id="contact-first-name"
+                    data-testid="contact-first-name"
                     name="firstName"
                     type="text"
                     required
@@ -168,6 +176,7 @@ export function Contact() {
                   </label>
                   <input
                     id="contact-last-name"
+                    data-testid="contact-last-name"
                     name="lastName"
                     type="text"
                     required
@@ -183,6 +192,7 @@ export function Contact() {
                 </label>
                 <input
                   id="contact-email"
+                  data-testid="contact-email"
                   name="email"
                   type="email"
                   required
@@ -197,6 +207,7 @@ export function Contact() {
                 </label>
                 <textarea
                   id="contact-message"
+                  data-testid="contact-message"
                   name="message"
                   required
                   placeholder={t('contact.form.messagePlaceholder')}
@@ -207,19 +218,24 @@ export function Contact() {
               {/* Web3Forms honeypot: bots tick it, humans never see it. */}
               <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" />
 
-              <Button type="submit" disabled={status === 'sending'} className="mt-2 w-full disabled:opacity-60">
+              <Button
+                type="submit"
+                disabled={status === 'sending'}
+                data-testid="contact-submit"
+                className="mt-2 w-full disabled:opacity-60"
+              >
                 {t(status === 'sending' ? 'contact.form.sending' : 'contact.form.submit')}
               </Button>
 
               {status === 'sent' && (
-                <p role="status" className="text-sm text-accent">
+                <p role="status" data-testid="contact-status-sent" className="text-sm text-accent">
                   {t('contact.form.sent')}
                 </p>
               )}
               {status === 'error' && (
-                <p role="alert" className="text-sm text-red-500 dark:text-red-400">
+                <p role="alert" data-testid="contact-status-error" className="text-sm text-red-500 dark:text-red-400">
                   {t('contact.form.error')}{' '}
-                  <a href={`mailto:${EMAIL}`} className="underline">
+                  <a href={`mailto:${EMAIL}`} data-testid="contact-error-email-link" className="underline">
                     {EMAIL}
                   </a>
                 </p>
@@ -229,7 +245,7 @@ export function Contact() {
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between">
-          <span className="text-sm text-slate-500 dark:text-slate-400">
+          <span data-testid="footer-copyright" className="text-sm text-slate-500 dark:text-slate-400">
             {t('footer.rights')} {t('hero.name')} @ {new Date().getFullYear()}
           </span>
 

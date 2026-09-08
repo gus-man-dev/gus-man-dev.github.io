@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { readStorage, writeStorage } from './storage';
+import { readStorage, writeStorage } from '../storage';
 
 describe('storage', () => {
   afterEach(() => {

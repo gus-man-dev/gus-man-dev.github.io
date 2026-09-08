@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { useScrolled } from './useScrolled';
+import { useScrolled } from '../useScrolled';
 
 function setScrollY(value: number) {
   Object.defineProperty(window, 'scrollY', { configurable: true, value });

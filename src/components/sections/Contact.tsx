@@ -1,9 +1,11 @@
-import type { ComponentType, FormEvent, SVGProps } from 'react';
+import { useState, type ComponentType, type FormEvent, type SVGProps } from 'react';
 import { useTranslation } from 'react-i18next';
 import contactMap from '../../assets/images/contact-map.png';
-import { EMAIL, PHONE_DISPLAY, PHONE_TEL, VISIBLE_SOCIAL_LINKS } from '../../constants/contact';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL, VISIBLE_SOCIAL_LINKS, WEB3FORMS_ACCESS_KEY } from '../../constants/contact';
 import { useInView } from '../../hooks/useInView';
 import { Button, MailIcon, PhoneIcon, PinIcon, Reveal, SectionHeading, SocialIconLink } from '../controls';
+
+type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
 
 interface ContactInfoItem {
   key: string;
@@ -20,9 +22,8 @@ const INFO_CARD_CLASSES =
   'flex items-center gap-6 rounded-lg bg-white px-8 py-8 shadow-md ring-1 ring-slate-200 transition-colors dark:bg-slate-800/60 dark:ring-slate-700';
 
 /**
- * There is no backend to receive the form — submitting hands the message
- * off to the visitor's mail client via a prefilled mailto: link, an honest
- * pattern for a static site with no server.
+ * Fallback for when no Web3Forms key is configured: hand the message off
+ * to the visitor's mail client via a prefilled mailto: link.
  */
 function buildMailtoHref(form: HTMLFormElement): string {
   const fields = new FormData(form);
@@ -35,6 +36,31 @@ function buildMailtoHref(form: HTMLFormElement): string {
 }
 
 /**
+ * Sends the message to the inbox via Web3Forms (static-site form relay,
+ * no backend of our own). Throws on any non-success response so the
+ * caller can show the error state.
+ */
+async function submitToWeb3Forms(form: HTMLFormElement): Promise<void> {
+  const fields = new FormData(form);
+  const name = `${fields.get('firstName')} ${fields.get('lastName')}`.trim();
+
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `CV site — message from ${name}`,
+      name,
+      email: fields.get('email'),
+      message: fields.get('message'),
+      botcheck: fields.get('botcheck'),
+    }),
+  });
+
+  if (!response.ok) throw new Error(`Web3Forms responded ${response.status}`);
+}
+
+/**
  * "Contact Me" block from the Maha reference: Address/Email/Phone as three
  * separate cards (not one shared block) with large ring-outline icons, and
  * a message form with First/Last name split. The page footer (copyright +
@@ -43,10 +69,27 @@ function buildMailtoHref(form: HTMLFormElement): string {
 export function Contact() {
   const { t } = useTranslation();
   const { ref, inView } = useInView<HTMLDivElement>();
+  const [status, setStatus] = useState<SubmitStatus>('idle');
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    window.location.href = buildMailtoHref(event.currentTarget);
+
+    const form = event.currentTarget;
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      window.location.href = buildMailtoHref(form);
+      return;
+    }
+
+    setStatus('sending');
+
+    try {
+      await submitToWeb3Forms(form);
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
   }
 
   const infoItems: ContactInfoItem[] = [
@@ -161,9 +204,26 @@ export function Contact() {
                 />
               </div>
 
-              <Button type="submit" className="mt-2 w-full">
-                {t('contact.form.submit')}
+              {/* Web3Forms honeypot: bots tick it, humans never see it. */}
+              <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" />
+
+              <Button type="submit" disabled={status === 'sending'} className="mt-2 w-full disabled:opacity-60">
+                {t(status === 'sending' ? 'contact.form.sending' : 'contact.form.submit')}
               </Button>
+
+              {status === 'sent' && (
+                <p role="status" className="text-sm text-accent">
+                  {t('contact.form.sent')}
+                </p>
+              )}
+              {status === 'error' && (
+                <p role="alert" className="text-sm text-red-500 dark:text-red-400">
+                  {t('contact.form.error')}{' '}
+                  <a href={`mailto:${EMAIL}`} className="underline">
+                    {EMAIL}
+                  </a>
+                </p>
+              )}
             </form>
           </Reveal>
         </div>

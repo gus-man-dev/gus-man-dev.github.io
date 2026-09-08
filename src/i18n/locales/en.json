@@ -281,7 +281,10 @@
       "emailPlaceholder": "Your Email",
       "message": "Message",
       "messagePlaceholder": "Your Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending…",
+      "sent": "Message sent — I'll get back to you soon!",
+      "error": "Something went wrong. Please email me directly:"
     }
   },
   "footer": {

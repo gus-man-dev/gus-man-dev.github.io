@@ -31,8 +31,9 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <details ref={detailsRef} className="relative">
+    <details ref={detailsRef} data-testid="language-switcher" className="relative">
       <summary
+        data-testid="language-switcher-toggle"
         className="flex h-8 cursor-pointer list-none items-center gap-1.5 rounded-full border-2 border-slate-900/60 px-3 text-sm text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900/10 dark:border-white/60 dark:text-slate-200 dark:hover:border-white dark:hover:bg-white/10"
         aria-label={t('language.label')}
       >
@@ -47,6 +48,7 @@ export function LanguageSwitcher() {
             <button
               key={lang}
               type="button"
+              data-testid={`language-option-${lang}`}
               onClick={() => selectLanguage(lang)}
               aria-pressed={current === lang}
               className={`flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800 ${

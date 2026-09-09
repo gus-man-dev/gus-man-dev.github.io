@@ -1,6 +1,8 @@
-# Build, verify and publish the site to GitHub Pages on every push to main.
-# The Web3Forms key comes from the repository secret VITE_WEB3FORMS_ACCESS_KEY
-# (Settings → Secrets and variables → Actions) — Vite inlines it at build time.
+# CI + deploy pipeline. Each quality gate is its own job so the Actions
+# graph shows every stage separately: format / lint / test run in
+# parallel, build waits for all three, deploy publishes to GitHub Pages.
+# The Web3Forms key comes from the repository secret
+# VITE_WEB3FORMS_ACCESS_KEY — Vite inlines it at build time.
 name: Deploy
 
 on:
@@ -18,33 +20,62 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  format:
+    name: Format check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - run: npm ci
-
       - run: npm run format:check
 
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - run: npm run lint
 
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - run: npm test
 
+  build:
+    name: Build
+    needs: [format, lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - run: npm run build
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
+    name: Deploy to Pages
     needs: build
     runs-on: ubuntu-latest
     environment:

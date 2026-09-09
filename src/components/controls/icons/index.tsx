@@ -126,6 +126,24 @@ export function MoonIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function CheckCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} {...props}>
+      <circle cx="12" cy="12" r="9.2" />
+      <path d="m8.2 12.4 2.5 2.5 5-5.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function XCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} {...props}>
+      <circle cx="12" cy="12" r="9.2" />
+      <path d="m9.2 9.2 5.6 5.6m0-5.6-5.6 5.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function PinIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} {...props}>

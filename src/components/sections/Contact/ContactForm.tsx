@@ -1,10 +1,36 @@
-import { useState, type FormEvent } from 'react';
+import type { TFunction } from 'i18next';
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { EMAIL, WEB3FORMS_ACCESS_KEY } from '../../../constants/contact';
-import { Button } from '../../controls';
+import { Button, CheckCircleIcon, XCircleIcon } from '../../controls';
+import type { ButtonVariant } from '../../controls/buttons/buttonStyles';
 import { buildMailtoHref, submitToWeb3Forms } from './utils';
 
 type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
+
+const BUTTON_VARIANT_BY_STATUS: Record<SubmitStatus, ButtonVariant> = {
+  idle: 'primary',
+  sending: 'primary',
+  sent: 'success',
+  error: 'danger',
+};
+
+const BUTTON_LABEL_BY_STATUS: Record<SubmitStatus, (t: TFunction) => string> = {
+  idle: (t) => t('contact.form.submit'),
+  sending: (t) => t('contact.form.sending'),
+  sent: (t) => t('contact.form.sentButton'),
+  error: (t) => t('contact.form.errorButton'),
+};
+
+const BUTTON_ICON_BY_STATUS: Record<SubmitStatus, ReactNode> = {
+  idle: null,
+  sending: null,
+  sent: <CheckCircleIcon className="h-4 w-4 -translate-y-[0.25px]" />,
+  error: <XCircleIcon className="h-4 w-4 -translate-y-[0.25px]" />,
+};
+
+/** How long the button wears its green/red outcome state before returning to normal. */
+const OUTCOME_CONFIRMATION_MS = 5000;
 
 const INPUT_CLASSES =
   'w-full rounded-md border border-slate-300 bg-transparent px-4 py-2.5 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-accent dark:border-slate-600 dark:text-white dark:placeholder:text-slate-400';
@@ -40,6 +66,17 @@ function FormField({ id, name, label, type = 'text', placeholder = label }: Form
 export function ContactForm() {
   const { t } = useTranslation();
   const [status, setStatus] = useState<SubmitStatus>('idle');
+  // The error details (with the direct email) outlive the button's transient
+  // red state — they stay until the visitor retries.
+  const [showErrorDetails, setShowErrorDetails] = useState(false);
+
+  useEffect(() => {
+    if (status !== 'sent' && status !== 'error') return;
+
+    const timer = setTimeout(() => setStatus('idle'), OUTCOME_CONFIRMATION_MS);
+
+    return () => clearTimeout(timer);
+  }, [status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -53,6 +90,7 @@ export function ContactForm() {
     }
 
     setStatus('sending');
+    setShowErrorDetails(false);
 
     try {
       await submitToWeb3Forms(form);
@@ -60,6 +98,7 @@ export function ContactForm() {
       form.reset();
     } catch {
       setStatus('error');
+      setShowErrorDetails(true);
     }
   }
 
@@ -95,13 +134,18 @@ export function ContactForm() {
       {/* Web3Forms honeypot: bots tick it, humans never see it. */}
       <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" />
 
+      {/* The button itself announces the outcome for a few seconds — green
+          checkmark on success, red cross on failure — then returns to normal
+          so the visitor can retry. */}
       <Button
         type="submit"
-        disabled={status === 'sending'}
+        variant={BUTTON_VARIANT_BY_STATUS[status]}
+        startIcon={BUTTON_ICON_BY_STATUS[status]}
+        disabled={status !== 'idle'}
         data-testid="contact-submit"
         className="mt-2 w-full disabled:opacity-60"
       >
-        {t(status === 'sending' ? 'contact.form.sending' : 'contact.form.submit')}
+        {BUTTON_LABEL_BY_STATUS[status](t)}
       </Button>
 
       {status === 'sent' && (
@@ -109,7 +153,7 @@ export function ContactForm() {
           {t('contact.form.sent')}
         </p>
       )}
-      {status === 'error' && (
+      {showErrorDetails && (
         <p role="alert" data-testid="contact-status-error" className="text-sm text-red-500 dark:text-red-400">
           {t('contact.form.error')}{' '}
           <a href={`mailto:${EMAIL}`} data-testid="contact-error-email-link" className="underline">

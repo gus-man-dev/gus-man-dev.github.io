@@ -35,6 +35,7 @@ describe('Contact form', () => {
     fillAndSubmitForm();
 
     expect(await screen.findByTestId('contact-status-sent')).toBeInTheDocument();
+    expect(screen.getByTestId('contact-submit')).toHaveTextContent('Sent!');
 
     const [url, request] = fetchMock.mock.calls[0];
     const payload = JSON.parse(request.body);
@@ -53,6 +54,7 @@ describe('Contact form', () => {
     fillAndSubmitForm();
 
     expect(await screen.findByTestId('contact-status-error')).toBeInTheDocument();
+    expect(screen.getByTestId('contact-submit')).toHaveTextContent("Couldn't send");
     expect(screen.getByTestId('contact-error-email-link')).toHaveAttribute('href', 'mailto:romka9876@gmail.com');
   });
 

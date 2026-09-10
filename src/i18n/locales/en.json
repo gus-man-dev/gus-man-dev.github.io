@@ -14,7 +14,7 @@
     "greeting": "Hello, I'm",
     "name": "Roman Gusevski",
     "title": "Senior Front-End Developer",
-    "location": "Polotsk, Belarus · Open to remote / relocation",
+    "location": "Polotsk/Minsk, Belarus · Open to remote / on-site",
     "downloadCv": "Download CV"
   },
   "about": {
@@ -57,7 +57,7 @@
         "meta": "via Yotec · United Kingdom · enterprise IT-management platform · concurrent with Rockspoon",
         "bullets": [
           "Led a front-end sub-team within a 14-person org",
-          "Took unit test coverage from 0% to 99%, from scratch"
+          "Took unit test coverage from 0% to ~90%, from scratch"
         ],
         "stack": ["Angular", "NGRX", "RxJS", "Jest", "Angular Material"]
       },
@@ -211,7 +211,7 @@
       },
       {
         "title": "Code Quality & Architecture",
-        "description": "Setting the code-quality bar for the team: introduced ESLint and Prettier as the project's code-style champion across a 14-engineer codebase, ran cross-review, and took unit test coverage from 0% to 99% from scratch."
+        "description": "Setting the code-quality bar for the team: introduced ESLint and Prettier as the project's code-style champion across a 14-engineer codebase, ran cross-review, and took unit test coverage from 0% to ~90% from scratch."
       },
       {
         "title": "Team Leadership & Mentoring",
@@ -230,8 +230,8 @@
     "tiers": [
       {
         "name": "Full-time",
-        "price": "$5000",
-        "note": "Available for full-time roles",
+        "price": "from $4000",
+        "note": "Available for full-time roles; rate is negotiable",
         "features": [
           "React / Next.js / Angular development",
           "Code review & architecture",

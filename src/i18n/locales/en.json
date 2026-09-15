@@ -35,13 +35,7 @@
           "Design and build new product features from scratch, including AI-assisted functionality",
           "Own architectural decisions for Next.js and Node.js modules"
         ],
-        "stack": [
-          "React",
-          "Next.js 13/14",
-          "Node.js",
-          "Redux",
-          "Claude Code"
-        ]
+        "stack": ["React", "Next.js 13/14", "Node.js", "Redux", "Claude Code"]
       },
       {
         "company": "Learnster",
@@ -53,13 +47,7 @@
           "Delivered features across 3 concurrent workstreams on a large LMS platform",
           "Built a shared component library adopted platform-wide"
         ],
-        "stack": [
-          "Angular",
-          "RxJS",
-          "SCSS",
-          "NGX-Bootstrap",
-          "Python"
-        ]
+        "stack": ["Angular", "RxJS", "SCSS", "NGX-Bootstrap", "Python"]
       },
       {
         "company": "Dashworks",
@@ -71,13 +59,7 @@
           "Led a front-end sub-team within a 14-person org",
           "Took unit test coverage from 0% to ~90%, from scratch"
         ],
-        "stack": [
-          "Angular",
-          "NGRX",
-          "RxJS",
-          "Jest",
-          "Angular Material"
-        ]
+        "stack": ["Angular", "NGRX", "RxJS", "Jest", "Angular Material"]
       },
       {
         "company": "Rockspoon",
@@ -89,13 +71,7 @@
           "Built core POS functionality end-to-end",
           "Owned business-logic features from architecture to stabilization"
         ],
-        "stack": [
-          "Angular",
-          "NGXS",
-          "RxJS",
-          "Angular Material",
-          "Go"
-        ]
+        "stack": ["Angular", "NGXS", "RxJS", "Angular Material", "Go"]
       },
       {
         "company": "iStarMap",
@@ -103,17 +79,8 @@
         "start": "05.2019",
         "end": "05.2020",
         "meta": "via ITechArt (outstaffing) · Belarus · internal HR platform for skills & project tracking",
-        "bullets": [
-          "Front-end lead on a 4-developer team",
-          "Architected the client app with React and Apollo GraphQL"
-        ],
-        "stack": [
-          "React",
-          "Apollo Client",
-          "GraphQL",
-          "Redux",
-          "Material UI"
-        ]
+        "bullets": ["Front-end lead on a 4-developer team", "Architected the client app with React and Apollo GraphQL"],
+        "stack": ["React", "Apollo Client", "GraphQL", "Redux", "Material UI"]
       },
       {
         "company": "Andersen",
@@ -125,13 +92,7 @@
           "Delivered 5 client engagements across manufacturing, veterinary, and B2B trading platforms (Indusoft, Cislink)",
           "Built internal travel-request tooling for UNESCO (France), with e2e test coverage"
         ],
-        "stack": [
-          "JavaScript",
-          "TypeScript",
-          "Angular/AngularJS",
-          "RxJS",
-          "AG-Grid"
-        ]
+        "stack": ["JavaScript", "TypeScript", "Angular/AngularJS", "RxJS", "AG-Grid"]
       }
     ]
   },
@@ -140,77 +101,35 @@
     "categories": [
       {
         "name": "Languages",
-        "items": [
-          "JavaScript",
-          "TypeScript"
-        ]
+        "items": ["JavaScript", "TypeScript"]
       },
       {
         "name": "Frameworks",
-        "items": [
-          "React",
-          "Next.js",
-          "Angular"
-        ]
+        "items": ["React", "Next.js", "Angular"]
       },
       {
         "name": "State Management",
-        "items": [
-          "Redux",
-          "Redux-Saga",
-          "NgRx",
-          "NGXS",
-          "Apollo Client",
-          "RxJS"
-        ]
+        "items": ["Redux", "Redux-Saga", "NgRx", "NGXS", "Apollo Client", "RxJS"]
       },
       {
         "name": "Styling",
-        "items": [
-          "SCSS/SASS",
-          "LESS",
-          "Styled Components",
-          "Emotion",
-          "CSS-in-JS",
-          "Material UI",
-          "Bootstrap"
-        ]
+        "items": ["SCSS/SASS", "LESS", "Styled Components", "Emotion", "CSS-in-JS", "Material UI", "Bootstrap"]
       },
       {
         "name": "API / Data",
-        "items": [
-          "REST API",
-          "GraphQL",
-          "Node.js"
-        ]
+        "items": ["REST API", "GraphQL", "Node.js"]
       },
       {
         "name": "Testing & Tooling",
-        "items": [
-          "Jest",
-          "Storybook",
-          "Istanbul/nyc",
-          "ESLint",
-          "Prettier",
-          "Webpack",
-          "Protractor"
-        ]
+        "items": ["Jest", "Storybook", "Istanbul/nyc", "ESLint", "Prettier", "Webpack", "Protractor"]
       },
       {
         "name": "AI Tools",
-        "items": [
-          "Claude Code",
-          "GitHub Copilot",
-          "ChatGPT"
-        ]
+        "items": ["Claude Code", "GitHub Copilot", "ChatGPT"]
       },
       {
         "name": "Other",
-        "items": [
-          "Docker",
-          "Git",
-          "Agile/Scrum"
-        ]
+        "items": ["Docker", "Git", "Agile/Scrum"]
       }
     ]
   },

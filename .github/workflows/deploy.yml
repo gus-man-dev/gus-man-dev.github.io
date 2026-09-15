@@ -8,6 +8,8 @@ name: Deploy
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -15,8 +17,10 @@ permissions:
   pages: write
   id-token: write
 
+# Per-ref group: PR runs cancel their own previous runs without
+# touching main's deploy pipeline.
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -77,6 +81,8 @@ jobs:
   deploy:
     name: Deploy to Pages
     needs: build
+    # PR runs verify only — publishing happens on push to main.
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -137,7 +137,7 @@
     "heading": "Education",
     "school": "Polotsk State University",
     "degree": "Degree in Information Technologies",
-    "years": "2013 – 2018",
+    "years": "2013 – 2017",
     "description": "Coursework covering programming fundamentals, software engineering, and computer science — the foundation for a 9+ year front-end career since."
   },
   "languages": {
@@ -266,7 +266,7 @@
     "heading": "Contact Me",
     "address": {
       "label": "Address",
-      "value": "Belarus, Polotsk, Turgeneva 8-12"
+      "value": "Polotsk, Belarus"
     },
     "email": {
       "label": "Email"

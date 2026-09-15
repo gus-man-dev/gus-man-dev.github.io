@@ -35,7 +35,13 @@
           "Проектирую и разрабатываю новые продуктовые фичи с нуля, включая AI-функциональность",
           "Отвечаю за архитектурные решения модулей на Next.js и Node.js"
         ],
-        "stack": ["React", "Next.js 13/14", "Node.js", "Redux", "Claude Code"]
+        "stack": [
+          "React",
+          "Next.js 13/14",
+          "Node.js",
+          "Redux",
+          "Claude Code"
+        ]
       },
       {
         "company": "Learnster",
@@ -47,7 +53,13 @@
           "Поставлял фичи в 3 параллельных потоках работ на крупной LMS-платформе",
           "Создал общую библиотеку компонентов, принятую всей командой"
         ],
-        "stack": ["Angular", "RxJS", "SCSS", "NGX-Bootstrap", "Python"]
+        "stack": [
+          "Angular",
+          "RxJS",
+          "SCSS",
+          "NGX-Bootstrap",
+          "Python"
+        ]
       },
       {
         "company": "Dashworks",
@@ -59,7 +71,13 @@
           "Руководил front-end подкомандой из 14 человек",
           "Поднял покрытие unit-тестами с 0% до ~90% с нуля"
         ],
-        "stack": ["Angular", "NGRX", "RxJS", "Jest", "Angular Material"]
+        "stack": [
+          "Angular",
+          "NGRX",
+          "RxJS",
+          "Jest",
+          "Angular Material"
+        ]
       },
       {
         "company": "Rockspoon",
@@ -71,7 +89,13 @@
           "Реализовал ключевую POS-функциональность end-to-end",
           "Отвечал за сложные фичи бизнес-логики — от архитектуры до стабилизации"
         ],
-        "stack": ["Angular", "NGXS", "RxJS", "Angular Material", "Go"]
+        "stack": [
+          "Angular",
+          "NGXS",
+          "RxJS",
+          "Angular Material",
+          "Go"
+        ]
       },
       {
         "company": "iStarMap",
@@ -83,7 +107,13 @@
           "Front-end лид команды из 4 разработчиков",
           "Спроектировал клиентское приложение на React и Apollo GraphQL"
         ],
-        "stack": ["React", "Apollo Client", "GraphQL", "Redux", "Material UI"]
+        "stack": [
+          "React",
+          "Apollo Client",
+          "GraphQL",
+          "Redux",
+          "Material UI"
+        ]
       },
       {
         "company": "Andersen",
@@ -95,7 +125,13 @@
           "5 клиентских проектов в сферах производства, ветеринарии и B2B-торговли (Indusoft, Cislink)",
           "Построил внутренний инструмент заявок на командировки для UNESCO (Франция), написал e2e-тесты"
         ],
-        "stack": ["JavaScript", "TypeScript", "Angular/AngularJS", "RxJS", "AG-Grid"]
+        "stack": [
+          "JavaScript",
+          "TypeScript",
+          "Angular/AngularJS",
+          "RxJS",
+          "AG-Grid"
+        ]
       }
     ]
   },
@@ -104,35 +140,77 @@
     "categories": [
       {
         "name": "Языки",
-        "items": ["JavaScript", "TypeScript"]
+        "items": [
+          "JavaScript",
+          "TypeScript"
+        ]
       },
       {
         "name": "Фреймворки",
-        "items": ["React", "Next.js", "Angular"]
+        "items": [
+          "React",
+          "Next.js",
+          "Angular"
+        ]
       },
       {
         "name": "State Management",
-        "items": ["Redux", "Redux-Saga", "NgRx", "NGXS", "Apollo Client", "RxJS"]
+        "items": [
+          "Redux",
+          "Redux-Saga",
+          "NgRx",
+          "NGXS",
+          "Apollo Client",
+          "RxJS"
+        ]
       },
       {
         "name": "Стилизация",
-        "items": ["SCSS/SASS", "LESS", "Styled Components", "Emotion", "CSS-in-JS", "Material UI", "Bootstrap"]
+        "items": [
+          "SCSS/SASS",
+          "LESS",
+          "Styled Components",
+          "Emotion",
+          "CSS-in-JS",
+          "Material UI",
+          "Bootstrap"
+        ]
       },
       {
         "name": "API / Данные",
-        "items": ["REST API", "GraphQL", "Node.js"]
+        "items": [
+          "REST API",
+          "GraphQL",
+          "Node.js"
+        ]
       },
       {
         "name": "Тестирование и инструменты",
-        "items": ["Jest", "Storybook", "Istanbul/nyc", "ESLint", "Prettier", "Webpack", "Protractor"]
+        "items": [
+          "Jest",
+          "Storybook",
+          "Istanbul/nyc",
+          "ESLint",
+          "Prettier",
+          "Webpack",
+          "Protractor"
+        ]
       },
       {
         "name": "AI-инструменты",
-        "items": ["Claude Code", "GitHub Copilot", "ChatGPT"]
+        "items": [
+          "Claude Code",
+          "GitHub Copilot",
+          "ChatGPT"
+        ]
       },
       {
         "name": "Другое",
-        "items": ["Docker", "Git", "Agile/Scrum"]
+        "items": [
+          "Docker",
+          "Git",
+          "Agile/Scrum"
+        ]
       }
     ]
   },
@@ -140,7 +218,7 @@
     "heading": "Образование",
     "school": "Полоцкий государственный университет",
     "degree": "Специальность «Информационные технологии»",
-    "years": "2013 – 2018",
+    "years": "2013 – 2017",
     "description": "Программа включала основы программирования, разработку ПО и computer science — базу для последующей 9+ летней карьеры во front-end."
   },
   "languages": {
